@@ -1,0 +1,1291 @@
+body,
+html {
+    width: 100%;
+    height: 100%;
+    background-color: #fafafa;
+}
+
+.main-wrapper {
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    background-color: #fafafa;
+}
+
+.main-wrapper::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+.main-wrapper::-webkit-scrollbar-track {
+    background-color: #f0f0f0;
+}
+
+.main-wrapper::-webkit-scrollbar-thumb {
+    background: #7a7b7c;
+    border-radius: 12px;
+}
+
+.main-wrapper::-webkit-scrollbar-thumb:hover {
+    background: #5a5b5c;
+    border-radius: 12px;
+}
+
+.p-small {
+    font: 400 0.875rem/1.375rem "인피니티산스", sans-serif;
+}
+
+.li-space-lg li {
+    margin-bottom: 0.375rem;
+}
+
+.a {
+    color: black;
+    text-decoration: underline;
+}
+
+.text-link {
+    color: #3a3b3c;
+    text-decoration: underline;
+}
+
+.text-link:hover {
+    color: #4a4b4c;
+}
+
+
+/* Fonts */
+@font-face {
+    font-family: '아임크리수진';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.3/ImcreSoojin.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: '인피니티산스';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/InfinitySans-RegularA1.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: '인피니티산스 Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/InfinitySans-BoldA1.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: '메이플체';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/MaplestoryOTFBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: '배찌체';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/Bazzi.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+/* End of Fonts */
+
+
+/* Title Text */
+h1 {
+    color: black;
+    font: 700 2.5rem/3rem "인피니티산스 Bold", sans-serif;
+}
+
+h2 {
+    color: black;
+    font: 700 1.75rem/2.125rem "인피니티산스 Bold", sans-serif;
+}
+
+h3 {
+    color: black;
+    font: 700 1.375rem/1.75rem "인피니티산스 Bold", sans-serif;
+}
+
+h4 {
+    color: black;
+    font: 700 1.25rem/1.625rem "인피니티산스 Bold", sans-serif;
+}
+
+h5 {
+    color: black;
+    font: 700 1.125rem/1.5rem "인피니티산스 Bold", sans-serif;
+}
+/* End of Title Text */
+
+
+/* Navigation Bar */
+.navbar-top {
+    position: relative;
+    width: 100%;
+    height: 4.725rem;
+    background-color: #fdfdfd;
+    overflow: hidden;
+}
+
+.navbar-logo {
+    display: inline-block;
+    font-family: "메이플체";
+    font-size: 2.25rem;
+    color: #5a5b5c;
+    text-decoration: none;
+    cursor: pointer;
+    margin: 0.685rem 0 0.685rem 1.235rem;
+    transition: all 0.35s ease-in-out;
+}
+
+.navbar-logo:hover {
+    color: #5a5b5c;
+}
+
+.navbar-bottom {
+    position: relative;
+    width: 100%;
+    height: 3.25rem;
+    background-color: #5a5b5c;
+    border-radius: 2.525px;
+    border-top: 3.25px solid rgb(55, 216, 117);
+    box-shadow: 1.825px 2.25px 3.125px #5a5b5c;
+    overflow: hidden;
+    transition: all 0.35s ease-in-out;
+}
+
+.navbar-item-bottom {
+    display: inline-block;
+    font-family: "배찌체";
+    font-size: 1.525rem;
+    color: #fdfdfd;
+    text-decoration: none;
+    cursor: pointer;
+    margin: 0.475rem 0 0.475rem 0.725rem;
+    transition: all 0.35s ease-in-out;
+}
+
+.navbar-item-bottom:hover {
+    color: #fdfdfd;
+}
+
+@media (max-width: 468px) {
+    .navbar-top {
+        position: relative;
+        width: 100%;
+        height: 3.725rem;
+        background-color: #fdfdfd;
+        overflow: hidden;
+    }
+    
+    .navbar-logo {
+        display: inline-block;
+        font-family: "메이플체";
+        font-size: 1.525rem;
+        color: #5a5b5c;
+        text-decoration: none;
+        cursor: pointer;
+        margin: 0.685rem 0 0.685rem 0.725rem;
+        transition: all 0.35s ease-in-out;
+    }
+
+    .navbar-bottom {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 2.325rem;
+        background-color: #5a5b5c;
+        border-radius: 2.525px;
+        border-top: 3.25px solid rgb(55, 216, 117);
+        box-shadow: 1.825px 2.25px 3.125px #5a5b5c;
+        overflow: hidden;
+        transition: all 0.35s ease-in-out;
+    }
+    
+    .navbar-item-bottom {
+        display: inline-block;
+        font-family: "배찌체";
+        font-size: 0.925rem;
+        color: #fdfdfd;
+        text-decoration: none;
+        cursor: pointer;
+        margin: 0.475rem 0 0.475rem 0.525rem;
+        transition: all 0.35s ease-in-out;
+    }
+}
+/* End of Navigation Bar */
+
+
+/* Title */
+.title-wrapper {
+    text-align: center;
+    animation: fade-in 0.35s ease-out 0.3s both, slide-down 0.35s ease-out 0.2s both;
+}
+
+.header-wrap {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.title-container {
+    width: 65%;
+    min-width: 65%;
+    margin: 0 auto;
+    margin-top: 2.25rem;
+}
+
+.title {
+    font-family: "배찌체";
+    font-size: 3.325rem;
+    line-height: 1.13;
+    color: #3a3b3c;
+    text-align: center;
+    transition: all 0.35s ease-in-out;
+}
+
+.subtitle-wrap {
+    display: inline-block;
+    width: 75%;
+    padding: 3.25rem 0;
+    margin: 0 auto;
+    margin-top: 1.325rem;
+    margin-bottom: 3.25rem;
+    border: 3.5px solid #5a5b5c;
+    text-align: center;
+    transition: all 0.35s ease-in-out;
+}
+
+.subtitle {
+    display: inline-block;
+    font-family: "메이플체";
+    font-size: 1.525rem;
+    line-height: 1.53;
+    color: #3a3b3c;
+    text-align: center;
+    margin: 0 auto;
+    transition: all 0.35s ease-in-out;
+}
+
+@media (max-width: 468px) {
+    .header-wrap {
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        margin-bottom: 1.325rem;
+    }
+
+    .title-container {
+        width: 85%;
+        min-width: 85%;
+        margin: 0 auto;
+        margin-top: 2.25rem;
+    }
+
+    .title {
+        font-family: "배찌체";
+        font-size: 2.825rem;
+        line-height: 1.13;
+        color: #3a3b3c;
+        text-align: center;
+        transition: all 0.35s ease-in-out;
+    }
+
+    .subtitle-wrap {
+        display: inline-block;
+        width: 95%;
+        padding: 3.25rem 0;
+        margin: 0 auto;
+        margin-top: 1.325rem;
+        margin-bottom: 3.25rem;
+        border: 3.5px solid #5a5b5c;
+        text-align: center;
+        transition: all 0.35s ease-in-out;
+    }
+    
+    .subtitle {
+        display: inline-block;
+        font-family: "메이플체";
+        font-size: 1.25rem;
+        line-height: 1.31;
+        color: #3a3b3c;
+        text-align: center;
+        margin: 0 auto;
+        transition: all 0.35s ease-in-out;
+    }
+}
+/* End of Title */
+
+
+/* Start */
+.start-btn {
+    display: inline-block;
+    min-width: 45%;
+    font-family: "메이플체";
+    color: #fdfdfd;
+    text-align: center;
+    font-size: 1.725rem;
+    background: #0e7cd6;
+    border: solid 1.5px #0e7cd6;
+    border-radius: 32px;
+    padding: 0.325rem 2.325rem;
+    margin-bottom: 3.725rem;
+    transition: all 0.35s ease-in-out;
+}
+
+.start-btn:hover {
+    background: #2b8cdb;
+    border: solid 1.5px #2b8cdb;
+}
+
+@media (max-width: 468px) {
+    .start-btn {
+        display: inline-block;
+        font-family: "메이플체";
+        color: #fdfdfd;
+        text-align: center;
+        font-size: 1.325rem;
+        background: #0e7cd6;
+        border: solid 1.5px #0e7cd6;
+        border-radius: 32px;
+        padding: 0.325rem 2.325rem;
+        margin-bottom: 3.725rem;
+        transition: all 0.35s ease-in-out;
+    }
+}
+/* End of Start */
+
+
+/* Progress Bar */
+.progress-box {
+    width: 65%;
+    height: 18.25px;
+    margin: 0 auto;
+    border-radius: 12px;
+    background-color: rgba(55, 216, 117, 0.25);
+    border: 3.25px solid #d4d4d4;
+}
+
+.progress-bar {
+    height: 100%;
+    border-radius: 12px;
+    background-color: rgba(55, 216, 117);
+    transition: width 0.6s ease;
+}
+/* End of Progress Bar */
+
+
+/* Question and Answer */
+#QnA {
+    margin-top: 2.25rem;
+    transition: all 0.35s ease-in-out;
+}
+
+.question-wrap {
+    text-align: center;
+    animation: fade-in 0.35s ease-out 0.3s both;
+    margin-top: 3.25rem;
+}
+
+.question {
+    width: 25.525rem;
+    height: 17.525rem;
+    background: url('../images/question.png') center center no-repeat;
+    background-size: cover;
+    margin: 0 auto;
+    transition: all 0.35s ease-in-out;
+}
+
+.question-number {
+    font-family: "메이플체";
+    font-size: 2.525rem;
+    color: #3a3b3c;
+    text-align: center;
+    padding-top: 1.25rem;
+    padding-bottom: 0.125rem;
+}
+
+.question-text {
+    font-family: "배찌체";
+    font-size: 2.325rem;
+    color: #3a3b3c;
+    line-height: 1.13;
+    text-align: center;
+    padding: 0 1.325rem;
+}
+
+@media (max-width: 468px) {
+    .question {
+        width: 18.525rem;
+        height: 12.525rem;
+        background: url('../images/question.png') center center no-repeat;
+        background-size: cover;
+        margin: 0 auto;
+        transition: all 0.35s ease-in-out;
+    }
+
+    .question-number{
+        font-family: "메이플체";
+        font-size: 1.825rem;
+        color: #3a3b3c;
+        text-align: center;
+        padding-top: 0.635rem;
+    }
+
+    .question-text {
+        font-family: "배찌체";
+        font-size: 1.825rem;
+        color: #3a3b3c;
+        line-height: 1.13;
+        text-align: center;
+        padding: 0 0.825rem;
+    }
+}
+
+@media (max-width: 320px) {
+    .question-wrap {
+        text-align: center;
+        animation: fade-in 0.35s ease-out 0.3s both;
+    }
+
+    .question {
+        width: 12.525rem;
+        background: url('../images/question.png') center center no-repeat;
+        background-size: cover;
+        margin: 0 auto;
+        transition: all 0.35s ease-in-out;
+    }
+
+    .question-number{
+        font-family: "메이플체";
+        font-size: 1.325rem;
+        color: #3a3b3c;
+        text-align: center;
+        padding-top: 2.525rem;
+    }
+
+    .question-text {
+        font-family: "배찌체";
+        font-size: 1.125rem;
+        color: #3a3b3c;
+        line-height: 1.13;
+        text-align: center;
+        padding: 0 0.825rem;
+    }
+}
+
+.answer-wrap {
+    width: 70%;
+    height: 17.325rem;
+    margin: 0 auto;
+    text-align: center;
+    transition: all 0.35s ease-in-out;
+    animation: fade-in 0.35s ease-out 0.3s both, slide-down 0.35s ease-out 0.2s both;
+}
+
+@media (max-width: 628px) {
+    .answer-wrap {
+        width: 85%;
+        height: 17.325rem;
+        margin: 0 auto;
+        text-align: center;
+        transition: all 0.35s ease-in-out;
+        animation: fade-in 0.35s ease-out 0.3s both, slide-down 0.35s ease-out 0.2s both;
+    }
+}
+
+.answer-box {
+    display: inline-block;
+    width: 80%;
+    background: #5a5b5c;
+    border: solid 1.5px #5a5b5c;
+    box-shadow: 2.25px 2.25px 8.325px -1.5px #3a3b3c;
+    border-radius: 16px;
+    padding: 0.525rem;
+    padding-left: 0.925rem;
+    margin-bottom: 15px;
+    transition: all 0.35s ease-in-out;
+}
+
+.answer-btn {
+    font-family: "배찌체";
+    color: #fdfdfd;
+    font-size: 1.325rem;
+    text-align: left;
+    transition: all 0.35s ease-in-out;
+}
+
+.answer-btn:hover {
+    color: #5a5b5c;
+    background: #fdfdfd;
+    border: solid 1.5px #fdfdfd;
+    transition: all 0.35s ease-in-out;
+}
+
+@media (max-width: 768px) {
+    .answer-box {
+        display: inline-block;
+        width: 100%;
+        background: #5a5b5c;
+        border: solid 1.5px #5a5b5c;
+        box-shadow: 2.25px 2.25px 8.325px -1.5px #3a3b3c;
+        border-radius: 16px;
+        padding: 0.525rem;
+        padding-left: 0.925rem;
+        margin-bottom: 15px;
+        transition: all 0.35s ease-in-out;
+    }
+    
+    .answer-btn {
+        font-family: "배찌체";
+        color: #fdfdfd;
+        font-size: 1.325rem;
+        text-align: left;
+        transition: all 0.35s ease-in-out;
+    }
+}
+
+@media (max-width: 468px) { 
+    .answer-btn {
+        font-family: "배찌체";
+        color: #fdfdfd;
+        font-size: 1.025rem;
+        text-align: left;
+        transition: all 0.35s ease-in-out;
+    }
+}
+/* End of QnA */
+
+
+/* Result Loader */
+.loading-wrap {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    margin: 0 auto;
+    padding-bottom: 15.25rem;
+}
+
+.spinner-wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 99999;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: 0 auto;
+}
+
+.spinner {
+    width: 3.75rem;
+    height: 1.25rem;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 15.25rem;
+}
+
+.spinner-animation {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 100%;
+    background-color: rgb(55, 216, 117);
+    -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+    animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+}
+
+.spinner .bounce1 {
+    -webkit-animation-delay: -0.32s;
+    animation-delay: -0.32s;
+}
+
+.spinner .bounce2 {
+    -webkit-animation-delay: -0.16s;
+    animation-delay: -0.16s;
+}
+
+@-webkit-keyframes sk-bouncedelay {
+    0%,
+    80%,
+    100% {
+        -webkit-transform: scale(0);
+    }
+    40% {
+        -webkit-transform: scale(1.0);
+    }
+}
+
+@keyframes sk-bouncedelay {
+    0%,
+    80%,
+    100% {
+        -webkit-transform: scale(0);
+        -ms-transform: scale(0);
+        transform: scale(0);
+    }
+    40% {
+        -webkit-transform: scale(1.0);
+        -ms-transform: scale(1.0);
+        transform: scale(1.0);
+    }
+}
+
+.loading-text {
+    font-family: "메이플체";
+    font-size: 2.25rem;
+    color: #7a7b7c;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 2.25rem;
+}
+
+.A-brain-type-bgcolor {
+    background-color: #e12b21;
+}
+
+.B-brain-type-bgcolor {
+    background-color: #11c520;
+}
+
+.C-brain-type-bgcolor {
+    background-color: #e4156b;
+}
+
+.D-brain-type-bgcolor {
+    background-color: #3d81da;
+}
+
+.E-brain-type-bgcolor {
+    background-color: #40f340;
+}
+
+.F-brain-type-bgcolor {
+    background-color: #c32ce9;
+}
+/* End of Result Loader */
+
+
+/* Result */
+.result-wrap {
+    width: 65%;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 5.25rem;
+    margin-bottom: 5.25rem;
+}
+
+@media (max-width: 768px) {
+    .result-wrap {
+        width: 90%;
+        text-align: center;
+        margin: 0 auto;
+        margin-top: 5.25rem;
+        margin-bottom: 5.25rem;
+    }
+}
+
+.result-title {
+    font-family: "메이플체";
+    font-size: 2.5rem;
+    line-height: 1.53;
+    margin-bottom: 0.525rem;
+}
+
+.result-subtitle {
+    font-family: "배찌체";
+    font-size: 1.35rem;
+    line-height: 1.13;
+    color: #4a4b4c;
+    margin-bottom: 3.25rem;
+}
+
+.result-mbti {
+    font-family: "메이플체";
+    font-size: 1.85rem;
+    line-height: 1.58;
+    color: #5a5b5c;
+    margin-bottom: 2.25rem;
+}
+
+.result-description-wrap {
+    display: inline-block;
+    width: 100%;
+    padding: 3.25rem 3.25rem;
+    margin: 0 auto;
+    margin-top: 1.325rem;
+    margin-bottom: 2.525rem;
+    text-align: center;
+}
+
+.A-brain-type-border {
+    border: 3.25px solid #e12b21;
+}
+
+.B-brain-type-border {
+    border: 3.25px solid #11c520;
+}
+
+.C-brain-type-border {
+    border: 3.25px solid #e4156b;
+}
+
+.D-brain-type-border{
+    border: 3.25px solid #3d81da;
+}
+
+.E-brain-type-border {
+    border: 3.25px solid #40f340;
+}
+
+.F-brain-type-border {
+    border: 3.25px solid #c32ce9;
+}
+
+.result-description {
+    display: inline-block;
+    font-family: "메이플체";
+    font-size: 1.5rem;
+    line-height: 1.58;
+    color: #3a3b3c;
+}
+
+.A-brain-type-color {
+    color: #e12b21;
+}
+
+.B-brain-type-color {
+    color: #11c520;
+}
+
+.C-brain-type-color {
+    color: #e4156b;
+}
+
+.D-brain-type-color {
+    color: #3d81da;
+}
+
+.E-brain-type-color {
+    color: #40f340;
+}
+
+.F-brain-type-color {
+    color: #c32ce9;
+}
+/* End of Result */
+
+
+/* Retry Test Button */
+.btn-container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.retry-btn {
+    display: block;
+    background: #0e7cd6;
+    border: solid 1.5px #0e7cd6;
+    border-radius: 40px;
+    padding: 0.325rem 2.25rem;
+    margin: 0 auto;
+}
+
+.retry-btn:hover {
+    background: #2b8cdb;
+    border: solid 1.5px #2b8cdb;
+}
+
+.retry-text {
+    display: inline-block;
+    font-family: "메이플체";
+    font-size: 1.65rem;
+    text-align: center;
+    color: #ffffff;
+    padding: 4px 16px;
+}
+/* End of Retry Test Button */
+
+
+/* Share Button */
+.share-wrap {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.share-title {
+    font-family: "메이플체";
+    font-size: 1.795rem;
+    color: black;
+    text-align: center;
+    margin-top: 2.25rem;
+    margin-bottom: 1.125rem;
+}
+
+.share-btn-wrap {
+    display: inline-block;
+    margin: 5px 5px 0 2px;
+    transition: all 0.2s ease-in-out;
+}
+
+.kakao-share-btn {
+    margin-right: 3px;
+}
+
+.kakao-share-image {
+    width: 42px;
+    height: 42px;
+    border-radius: 32px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.kakao-share-image:hover {
+    transform: translateY(-3px);
+    transition: all 0.2s ease-in-out;
+}
+
+.local-share-image {
+    width: 42px;
+    height: 42px;
+    border: solid 2.25px #3a3b3c;
+    border-radius: 32px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.local-share-image:hover {
+    transform: translateY(-3px);
+    transition: all 0.2s ease-in-out;
+}
+/* End of Share Button */
+
+
+/* Used Licence */
+.used-licence-wrap {
+	padding-top: 3.25rem;
+}
+
+.used-licence-wrap .text-container {
+	margin-bottom: 3rem;
+}
+
+.used-licence-wrap .section-title {
+    font-family: "인피니티산스 Bold";
+	margin-bottom: 0.95rem;
+}
+
+.used-licence-wrap h2 {
+	margin-bottom: 1.375rem;
+}
+
+.used-licence-link-wrap {
+    margin-left: 0.85rem;
+    margin-bottom: 0.65rem;
+}
+
+.used-licence-link {
+    font-family: "메이플체";
+    font-size: 1.125rem;
+    color: #3a3b3c;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.used-licence-link:hover {
+    color: #4a4b4c;
+}
+/* End of Used Licence */
+
+
+/* Copyright */
+.copyright {
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+    background-color: #000000;
+    text-align: center;
+}
+
+.copyright p,
+.copyright a {
+    color: #dfe5ec;
+    text-decoration: none;
+}
+/* End of Copyright */
+
+
+/* Test Counter */
+.test-counter-wrap {
+    width: 100%;
+    height: 5.25rem;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.test-counter-text {
+    font-family: "메이플체";
+    font-size: 1.25rem;
+    color: #f8f8f8;
+    text-shadow: -1.45px 0 black, 0 2.35px black, 2.35px 0 black, 0 -1.45px black;
+}
+/* End of Web Counter */
+
+
+/* ADS */
+.ad-boundary {
+    width: 85%;
+    margin: 0 auto;
+    margin-top: 1.325rem;
+    border-bottom: 2.825px solid #7a7b7c;
+}
+
+.ad-container {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 2.135rem;
+    margin-bottom: 0.125rem;
+    overflow: hidden;
+}
+
+.ad-banner {
+    width: 75%;
+    height: auto;
+    margin: 0 auto;
+    margin-bottom: 0.725rem;
+    transition: all 0.35s ease-in-out;
+}
+
+@media (max-width: 468px) {
+    .ad-banner {
+        width: 320px;
+        height: 100px;
+        margin: 0 auto;
+        margin-bottom: 0.725rem;
+        transition: all 0.35s ease-in-out;
+    }
+}
+
+.ad-container-grid {
+    display: grid;
+    width: 55%;
+    height: 275px;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0 auto;
+    transition: all 0.35s ease-in-out;
+}
+
+@media (max-width: 968px) {
+    .ad-container-grid {
+        display: grid;
+        width: 65%;
+        height: 275px;
+        grid-template-columns: repeat(2, 1fr);
+        margin: 0 auto;
+        transition: all 0.35s ease-in-out;
+    }
+}
+
+@media (max-width: 768px) {
+    .ad-container-grid {
+        width: fit-content;
+        height: 525px;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        margin-top: 2.25rem;
+        transition: all 0.35s ease-in-out;
+    }
+}
+
+.ad-banner-grid {
+    width: 250px;
+    height: 250px;
+    margin: 0 auto;
+}
+/* End of ADS */
+
+
+/* Licence Page */
+.licence-wrap {
+    display: block;
+    width: 45.25rem;
+    height: auto;
+    background: #fafafa;
+    box-shadow: 2.25px 2.25px 8.325px -1.5px #3a3b3c;
+    border-radius: 16px;
+    padding: 3.525rem 2.25rem;
+    margin: 8.5rem auto;
+    transition: all 0.35s ease-in-out;
+    animation: fade-in 0.35s ease-out 0.3s both, slide-down 0.35s ease-out 0.2s both;
+}
+
+@media (max-width: 768px) {
+    .licence-wrap {
+        display: block;
+        width: 27.25rem;
+        height: auto;
+        background: #f8f8f8;
+        box-shadow: 2.25px 2.25px 8.325px -1.5px #3a3b3c;
+        border-radius: 16px;
+        padding: 3.525rem 2.25rem;
+        margin: 8.5rem auto;
+        transition: all 0.35s ease-in-out;
+        animation: fade-in 0.35s ease-out 0.3s both, slide-down 0.35s ease-out 0.2s both;
+    }
+}
+
+.licence-text {
+    display: inline-block;
+    font-family: "인피니티산스 Bold";
+    font-size: 1.25rem;
+    color: #3a3b3c;
+    text-align: center;
+    margin-bottom: 2.25rem;
+    transition: all 0.35s ease-in-out;
+}
+
+.download-licence-btn {
+    display: block;
+    background: #3a3b3c;
+    border: 1.5px solid #3a3b3c;
+    box-shadow: 2.25px 2.25px 8.325px -1.5px #3a3b3c;
+    border-radius: 16px;
+    padding: 0.925rem 1.325rem;
+    margin: 0 auto;
+    font-family: "인피니티산스 Bold";
+    font-size: 1.125rem;
+    color: #3a3b3c;
+    text-align: center;
+    transition: all 0.35s ease-in-out;
+}
+
+.download-licence-btn:hover {
+    color: #3a3b3c;
+    background: #ffffff;
+    border: 2.25px solid #3a3b3c;
+    transition: all 0.35s ease-in-out;
+}
+
+.download-licence-image {
+    display: inline-block;
+    width: 1.125rem;
+    height: auto;
+    margin: 0 0.25rem 0.125rem 0;
+    transition: all 0.35s ease-in-out;
+}
+
+@media (max-width: 468px) {
+    .licence-wrap {
+        display: block;
+        width: 20.25rem;
+        height: auto;
+        background: #f8f8f8;
+        box-shadow: 2.25px 2.25px 8.325px -1.5px #3a3b3c;
+        border-radius: 16px;
+        padding: 3.525rem 2.25rem;
+        margin: 8.5rem auto;
+        transition: all 0.35s ease-in-out;
+        animation: fade-in 0.35s ease-out 0.3s both, slide-down 0.35s ease-out 0.2s both;
+    }
+
+    .licence-text {
+        display: inline-block;
+        font-family: "인피니티산스 Bold";
+        font-size: 0.725rem;
+        color: #3a3b3c;
+        text-align: center;
+        margin-bottom: 2.25rem;
+        transition: all 0.35s ease-in-out;
+    }
+
+    .download-licence-btn {
+        display: block;
+        background: #3a3b3c;
+        border: 1.5px solid #3a3b3c;
+        box-shadow: 2.25px 2.25px 8.325px -1.5px #3a3b3c;
+        border-radius: 8px;
+        padding: 0.525rem 0.925rem;
+        margin: 0 auto;
+        font-family: "인피니티산스 Bold";
+        font-size: 0.825rem;
+        color: #3a3b3c;
+        text-align: center;
+        transition: all 0.35s ease-in-out;
+    }
+
+    .download-licence-image {
+        display: inline-block;
+        width: 0.725rem;
+        height: auto;
+        margin: 0 0.25rem 0.125rem 0;
+        transition: all 0.35s ease-in-out;
+    }
+}
+
+.send-email-wrap {
+    display: block;
+    width: 40.25rem;
+    height: auto;
+    background: #5a5b5c;
+    box-shadow: 2.25px 2.25px 8.325px -1.5px #3a3b3c;
+    border-radius: 16px;
+    padding: 3.525rem 2.25rem;
+    margin: 8.5rem auto;
+    transition: all 0.35s ease-in-out;
+    animation: fade-in 0.35s ease-out 0.3s both, slide-down 0.35s ease-out 0.2s both;
+}
+
+@media (max-width: 768px) {
+    .send-email-wrap {
+        display: block;
+        width: 23.25rem;
+        height: auto;
+        background: #5a5b5c;
+        box-shadow: 2.25px 2.25px 8.325px -1.5px #3a3b3c;
+        border-radius: 16px;
+        padding: 3.525rem 2.25rem;
+        margin: 8.5rem auto;
+        transition: all 0.35s ease-in-out;
+        animation: fade-in 0.35s ease-out 0.3s both, slide-down 0.35s ease-out 0.2s both;
+    }
+}
+
+.send-email-input {
+    display: block;
+    width: 75%;
+    height: 2.25rem;
+    font-family: "인피니티산스 Bold";
+    font-size: 0.825rem;
+    background: #fdfdfd;
+    border: 1.5px solid #fdfdfd;
+    border-radius: 8px;
+    margin: 0 0.25rem 1.25rem 0;
+    transition: all 0.35s ease-in-out;
+}
+
+.send-email-textarea {
+    display: block;
+    width: 65%;
+    height: 11.25rem;
+    font-family: "인피니티산스 Bold";
+    font-size: 0.825rem;
+    text-align: center;
+    background: #fdfdfd;
+    border: 1.5px solid #fdfdfd;
+    border-radius: 2px;
+    transition: all 0.35s ease-in-out;
+}
+
+.send-email-btn {
+    display: block;
+    width: 11.25rem;
+    height: 3.25rem;
+    font-family: "인피니티산스 Bold";
+    font-size: 1.025rem;
+    color: #fdfdfd;
+    background: #0e7cd6;
+    border: 1.5px solid #0e7cd6;
+    border-radius: 6px;
+    margin: 2.25rem auto 0 auto;
+    transition: all 0.25s ease-in-out;
+}
+
+.send-email-btn:hover {
+    color: #fdfdfd;
+    background: #4a4b4c;
+    border: 2.25px solid #0e7cd6;
+    transition: all 0.25s ease-in-out;
+}
+
+@media (max-width: 468px) {
+    .send-email-wrap {
+        display: block;
+        width: 16.25rem;
+        height: auto;
+        background: #5a5b5c;
+        box-shadow: 2.25px 2.25px 8.325px -1.5px #3a3b3c;
+        border-radius: 16px;
+        padding: 3.525rem 2.25rem;
+        margin: 8.5rem auto;
+        transition: all 0.35s ease-in-out;
+        animation: fade-in 0.35s ease-out 0.3s both, slide-down 0.35s ease-out 0.2s both;
+    }
+
+    .send-email-input {
+        display: block;
+        width: 75%;
+        height: 2.25rem;
+        font-family: "인피니티산스 Bold";
+        font-size: 0.525rem;
+        background: #fdfdfd;
+        border: 1.5px solid #fdfdfd;
+        border-radius: 8px;
+        margin: 0 0.25rem 1.25rem 0;
+        transition: all 0.35s ease-in-out;
+    }
+
+    .send-email-textarea {
+        display: block;
+        width: 65%;
+        height: 11.25rem;
+        font-family: "인피니티산스 Bold";
+        font-size: 0.635rem;
+        text-align: center;
+        background: #fdfdfd;
+        border: 1.5px solid #fdfdfd;
+        border-radius: 2px;
+        transition: all 0.35s ease-in-out;
+    }
+
+    .send-email-btn {
+        display: block;
+        width: 8.25rem;
+        height: 2.525rem;
+        font-family: "인피니티산스 Bold";
+        font-size: 1.025rem;
+        color: #fdfdfd;
+        background: #0e7cd6;
+        border: 1.5px solid #0e7cd6;
+        border-radius: 6px;
+        margin: 2.25rem auto 0 auto;
+        transition: all 0.25s ease-in-out;
+    }
+}
+
+.licence-language-btn-wrap {
+    display: block;
+    position: absolute;
+    right: 0.85rem;
+    bottom: 0.65rem;
+    animation: fade-in 0.35s ease-out 0.3s both;
+}
+
+.licence-language-btn {
+    display: inline-block;
+    background: #4a4b4c;
+    border: 1.5px solid #4a4b4c;
+    border-radius: 6px;
+    box-shadow: 2.25px 2.25px 8.325px -1.5px #3a3b3c;
+    padding: 0.525rem 0.325rem;
+    font-family: "메이플체";
+    font-size: 1.125rem;
+    color: #fdfdfd;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.25s ease-in-out;
+    animation: fade-in 0.35s ease-out 0.3s both;
+}
+
+.licence-language-btn:hover {
+    background: #fafafa;
+    border: 2.25px solid #4a4b4c;
+    color: #4a4b4c;
+    transition: all 0.25s ease-in-out;
+}
+/* End of Licence Page */

@@ -1,0 +1,4 @@
+User-agent: *
+Allow:/
+
+Sitemap: https://qna-brain-personality.netlify.app/sitemap.xml

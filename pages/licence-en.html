@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+
+    <meta name="author" content="Kyllox">
+
+    <title>Licence</title>
+
+    <link rel="icon" href="../images/licence-icon-black.png">
+
+    <link href="../css/bootstrap.css" rel="stylesheet">
+    <link href="../css/styles.css" rel="stylesheet">
+    <link href="../css/animations.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="main-wrapper">
+        <nav class="navbar-top">
+            <a class="navbar-logo" onclick="goMainPage();">Brain Personality Test</a>
+        </nav>
+        <div class="navbar-bottom">
+            <a class="navbar-item-bottom" rel="noopener noreferrer" target="_blank" href="https://brain-personality.site">Go to see brain personality types to pictures</a>
+        </div>
+        
+        
+        <div class="licence-wrap">
+            <p class="licence-text">All copyrights on this page belong to <b><u>Kyllox</u></b>, and you maybe legally liable under copyright law if you use or modify the source of this page without permission. If you have any questions, please contact <b><u>Kyllox4804@gmail.com</u></b>.<br>If you go down, you can send an email direct.</p>
+
+            <button class="download-licence-btn" onclick="window.location.replace('https://www.dropbox.com/s/pcrx11wbuvgyb90/licence.txt?dl=1');">
+                <span class="download-licence-text"><img class="download-licence-image" src="../images/licence-icon-white.png" alt="licence-icon">Download TXT file</span>
+            </button>
+        </div>
+
+
+        <div class="send-email-wrap">
+            <input type="text" name="name" class="send-email-input form-control" placeholder="Please type your name">
+            <input type="text" name="email" class="send-email-input form-control" placeholder="Please type your email address">
+            <textarea name="message" rows="3" class="send-email-textarea form-control" placeholder="Please type message"></textarea>
+            <input type="button" name="submit" class="send-email-btn" value="Submit"/>
+        </div>
+
+
+        <section class="licence-language-btn-wrap">
+            <button class="licence-language-btn" onclick="window.location.replace('licence-ko.html');">한국어로 보기</button>
+        </section>
+    </div>
+
+
+    <script type="text/javascript"src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="../scripts/functions.js"></script>
+
+    <script>
+        emailjs.init("user_ObDVdiMQlk2RAhavouTNx");
+
+        $('input[name=submit]').click(function() {
+            const name = $('input[name=name]');
+            const email = $('input[name=email]');
+            const message = $('textarea[name=message]');
+
+            const checkEmail = /^[A-Za-z0-9_\.\-]+@[A-Za-z0-9\-]+\.[A-Za-z0-9\-]+/;
+
+            const notUndefinedMessage = name.val() && email.val() && checkEmail.test(email.val()) && message.val() != '';
+
+            var templateParams = {
+                name: name.val(),
+                email : email.val(),
+                message : message.val()
+            };
+
+            if (name.val() == '') {
+                alert("Please type your name.");
+                name.focus();
+            } else if (email.val() == '') {
+                alert("Please type your email address.");
+                email.focus();
+            } else if (!checkEmail.test(email.val())) {
+                alert("The email address is not valid.");
+                email.focus();
+            } else if (message.val() == '') {
+                alert("Please type your message.");
+                message.focus();
+            }
+
+            if (notUndefinedMessage) {
+                emailjs.send('service_kyllox', 'template_kyllox', templateParams).then(function(response) {
+                    window.alert('Successfully sent an email.\n' + response.status + ' ' + response.text);
+                }, function(e) {
+                    window.alert('Email sending failed.\n' + e);
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

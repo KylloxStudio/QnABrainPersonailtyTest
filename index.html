@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<!--
+Author: Kyllox
+Author's Homepage URL: https://kyllox-studio.netlify.app
+Licence URL: https://qna-brain-personality.netlify.app/pages/licence-ko.html | https://qna-brain-personality.netlify.app/licence.txt
+
+Kyllox 2021. All Rights Reserved.
+-->
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+
+    <meta name="author" content="Kyllox">
+    <meta name="title" content="뇌 성격 테스트">
+    <meta name="subject" content="16가지 질문으로 찾는 나의 뇌 성격 유형 테스트!">
+    <meta name="keywords" content="뇌 성격 유형 테스트, 뇌 성격 테스트, 뇌 성격 유형, 뇌 성격">
+    <meta name="description" content="간단한 질문으로 찾는 뇌 성격 유형 테스트! 결과가 성격과 너무 똑같아 놀라지 말길...">
+
+    <meta property="og:site_name" content="뇌 성격 유형 테스트" />
+    <meta property="og:site" content="https://qna-brain-personality.netlify.app" />
+    <meta property="og:title" content="뇌 성격 유형 테스트" />
+    <meta property="og:description" content="간단한 질문으로 찾는 뇌 성격 유형 테스트! 결과가 성격과 너무 똑같아 놀라지 말길..." />
+    <meta property="og:image" content="https://qna-brain-personality.netlify.app/images/main-image.png">
+    <meta property="og:image:alt" content="Main-Image">
+    <meta property="og:url" content="https://qna-brain-personality.netlify.app" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="ko_KR" />
+
+    <meta name="google-site-verification" content="v0I20DJOMQrvKtwjArPX77eslNT9PHH54AKjZJ8Wg_g" />
+    <meta name="naver-site-verification" content="2ec80989534be1ec028a83ce1b6ff75dc5abc071" />
+
+    <title>뇌 성격 유형 테스트</title>
+
+    <link rel="canonical" href="https://qna-brain-personality.netlify.app" />
+    <link rel="icon" href="images/main-image.png">
+    <link rel="shortcut icon" href="images/main-image.png" type="image/x-icon">
+
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <link href="css/animations.css" rel="stylesheet">
+</head>
+
+<body id="top">
+    <div class="main-wrapper">
+        <nav class="navbar-top">
+            <a class="navbar-logo" onclick="reloadPage();">뇌 성격 유형 테스트</a>
+        </nav>
+        <div class="navbar-bottom">
+            <a class="navbar-item-bottom" rel="noopener noreferrer" target="_blank" href="https://brain-personality.site">사진으로 뇌 성격 유형 보러가기</a>
+        </div>
+        
+        
+        <header id="title" class="title-wrapper">
+            <div class="header-wrap">
+                <div class="title-container">
+                    <h1 class="title">뇌 성격 유형<br>테스트</h1>
+        
+                    <div class="subtitle-wrap">
+                        <h2 class="subtitle">16가지 질문으로 찾는<br>내 뇌 성격 유형!</h2>
+                    </div>
+                
+                    <button id="start" class="start-btn" onclick="start();">시작하기</button>
+                
+                    <div class="test-counter-wrap">
+                        <p class="test-counter-text">지금까지 총 <a rel="noopener noreferrer" target="_blank" href="https://www.webfreecounter.com"><img src="https://www.webfreecounter.com/hit.php?id=gumvnqfqc&nd=6&style=10" alt="web-test-counter"></a>번<br>테스트를 진행했어요!</p>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        
+        <section id="used-licence-link" class="used-licence-link-wrap">
+            <a id="show-used-licence" class="used-licence-link" onclick="showHideUsedLicence();">사용된 라이센스 보기</a>
+        
+            <a id="hide-used-licence" class="used-licence-link" onclick="showHideUsedLicence();">사용된 라이센스 숨기기</a>
+        </section>
+        
+        
+        <section id="QnA">
+            <div class="progress-box">
+                <div class="progress-bar"></div>
+            </div>
+        
+            <div class="question-wrap">
+                <div class="question">
+                    <div class="question-number"></div>
+                    <div class="question-text"></div>
+                </div>
+            </div>
+        
+            <div id="answer" class="answer-wrap"></div>
+        </section>
+        
+        
+        <div id="loading" class="loading-wrap">
+            <div class="spinner-wrapper">
+                <div id="loading-spinner" class="spinner">
+                    <div id="spinner1" class="spinner-animation bounce1"></div>
+                    <div id="spinner2" class="spinner-animation bounce2"></div>
+                    <div id="spinner3" class="spinner-animation bounce3"></div>
+                </div>
+                <p id="loading-text" class="loading-text">잠시만 기다려주세요!</p>
+            </div>
+        </div>
+        
+        
+        <div id="result" class="result-wrap">
+            <div id="result-subtitle" class="result-subtitle"></div>
+            <div id="result-title" class="result-title"></div>
+            <div id="result-mbti" class="result-mbti"></div>
+            <div id="result-description-wrap" class="result-description-wrap">
+                <div id="result-description" class="result-description"></div>
+            </div>
+
+            <div class="btn-container">
+                <button type="button p-2" class="retry-btn" onclick="reTryTest();">
+                    <span class="retry-text">다시하기</span>
+                </button>
+
+                <div class="share-wrap">
+                    <p class="share-title">《 페이지 공유하기 》</p>
+
+                    <div class="addthis_inline_share_toolbox_4usf"></div>
+
+                    <div class="share-btn-wrap">
+                        <a role="button" tabindex="0" id="kakao-share" class="kakao-share-btn" href="javascript:sendLink()"><img class="kakao-share-image" src="images/kakao-icon.png"/></a>
+                        
+                        <a role="button" tabindex="0" id="local-share"><img class="local-share-image" src="images/share-icon.png" alt="share-image"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        <div id="used-licence" class="used-licence-wrap">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5">
+                        <div class="text-container">
+                            <div class="section-title">MAIN IMAGE (FAVICON)</div>
+                            <h2 style="font-family:인피니티산스 Bold;"><b>메인 이미지(Favicon) 라이센스</b></h2>
+                            <p style="font-family:인피니티산스 Bold;">사이트 메인 이미지의 저작권은<br><b>Eucalyp Studio</b>에게 있으며,</p>
+                            <p style="font-family:인피니티산스 Bold;"><a class="text-link" rel="noopener noreferrer" target="_blank" href="https://icon-icons.com/ko/%EC%95%84%EC%9D%B4%EC%BD%98/%EB%87%8C-%EC%A0%84%EC%9E%90-%ED%9A%8C%EB%A1%9C-%EC%9D%B8%EA%B3%B5-%EC%A7%80%EB%8A%A5/101960"><b>여기</b></a>에서 확인하실 수 있습니다.</p>
+                            <p></p>
+                            <li><a style="font-family:인피니티산스 Bold;" class="text-link" rel="noopener noreferrer" target="_blank" href="https://creativecommons.org/licenses/by/4.0/deed.ko"><b>라이센스 링크</b></a></li>
+                            <p></p>
+                            <li><a style="font-family:인피니티산스 Bold;" class="text-link" rel="noopener noreferrer" target="_blank" href="https://icon-icons.com/ko"><b>사이트 링크 (icon-icons.com)</b></a></li>
+                            <br><br>
+
+                            <div class="section-title">FAVICON IMAGE 02</div>
+                            <h2 style="font-family:인피니티산스 Bold;"><b>Favicon 이미지 라이센스<br>(라이센스 안내)</b></h2>
+                            <p style="font-family:인피니티산스 Bold;">Favicon 이미지(파일 인터페이스)의 저작권은<br><b>Linh Pham</b>에게 있으며,</p>
+                            <p style="font-family:인피니티산스 Bold;">이미지는 <a class="text-link" rel="noopener noreferrer" target="_blank" href="https://icon-icons.com/ko/%EC%95%84%EC%9D%B4%EC%BD%98/%ED%8C%8C%EC%9D%BC-%EC%9D%B8%ED%84%B0%ED%8E%98%EC%9D%B4%EC%8A%A4-%EC%83%81%EC%A7%95-%ED%85%8D%EC%8A%A4%ED%8A%B8-%EC%A2%85%EC%9D%B4-%EC%8B%9C%ED%8A%B8/79740"><b>여기</b></a>에서 확인하실 수 있습니다.</p>
+                            <p style="font-family:인피니티산스 Bold;">+ Favicon이 아닌 다른 부분에 사용한 이미지의 색을<br>수정했습니다. (black -> white)</p>
+                            <p></p>
+                            <li><a style="font-family:인피니티산스 Bold;" class="text-link" rel="noopener noreferrer" target="_blank" href="https://creativecommons.org/licenses/by/4.0/deed.ko"><b>라이센스 링크</b></a></li>
+                            <p></p>
+                            <li><a style="font-family:인피니티산스 Bold;" class="text-link" rel="noopener noreferrer" target="_blank" href="https://icon-icons.com/ko"><b>사이트 링크 (icon-icons.com)</b></a></li>
+
+                            <br><br>
+        
+                            <div class="section-title">QUESTION IMAGE</div>
+                            <h2 style="font-family:인피니티산스 Bold;"><b>말풍선 이미지 라이센스</b></h2>
+                            <p style="font-family:인피니티산스 Bold;">말풍선 이미지의 저작권은<br><b style="font-family:인피니티산스 Bold;">Katarina Stefanikova</b>에게 있으며,</p>
+                            <p style="font-family:인피니티산스 Bold;">이미지는 <a class="text-link" rel="noopener noreferrer" target="_blank" href="https://icon-icons.com/ko/%EC%95%84%EC%9D%B4%EC%BD%98/%EB%A9%94%EC%8B%9C%EC%A7%80-%EC%96%B8%EC%96%B4-%EA%B1%B0%ED%92%88-%EA%B0%9C%EC%9A%94-%EC%9D%98-%EC%A7%81%EC%82%AC%EA%B0%81%ED%98%95-%EB%AA%A8%EC%96%91/80716"><b>여기</b></a>에서 확인하실 수 있습니다.</p>
+                            <p></p>
+                            <li><a style="font-family:인피니티산스 Bold;" class="text-link" rel="noopener noreferrer" target="_blank" href="https://creativecommons.org/licenses/by/4.0/"><b>라이센스 링크</b></a></li>
+                            <p></p>
+                            <li><a style="font-family:인피니티산스 Bold;" class="text-link" rel="noopener noreferrer" target="_blank" href="https://icon-icons.com"><b>사이트 링크 (icon-icons.com)</b></a></li>
+
+                            <br><br>
+        
+                            <div class="section-title">SHARE IMAGE</div>
+                            <h2 style="font-family:인피니티산스 Bold;"><b>공유 아이콘 라이센스</b></h2>
+                            <p style="font-family:인피니티산스 Bold;">공유 아이콘의 저작권은<br><b style="font-family:인피니티산스 Bold;">Dave Gandy</b>에게 있으며,</p>
+                            <p style="font-family:인피니티산스 Bold;">이미지는 <a class="text-link" rel="noopener noreferrer" target="_blank" href="https://icon-icons.com/ko/%EC%95%84%EC%9D%B4%EC%BD%98/%EA%B3%B5%EC%9C%A0-%EC%98%B5%EC%85%98/73420"><b>여기</b></a>에서 확인하실 수 있습니다.</p>
+                            <p style="font-family:인피니티산스 Bold;">+ 원본 이미지의 배경을 수정했습니다. (alpha -> white)</p>
+                            <p></p>
+                            <li><a style="font-family:인피니티산스 Bold;" class="text-link" rel="noopener noreferrer" target="_blank" href="https://creativecommons.org/licenses/by/4.0/"><b>라이센스 링크</b></a></li>
+                            <p></p>
+                            <li><a style="font-family:인피니티산스 Bold;" class="text-link" rel="noopener noreferrer" target="_blank" href="https://icon-icons.com"><b>사이트 링크 (icon-icons.com)</b></a></li>
+        
+                            <br><br>
+        
+                            <div class="section-title">FONT</div>
+                            <h2 style="font-family:메이플체;"><b>폰트 라이센스 -  메이플스토리 서체</b></h2>
+                            <p style="font-family:인피니티산스 Bold;">이 페이지는 <a><b>넥슨 (Nexon)</b></a>에서 제공한<br><a style="font-family:메이플체;"><b>메이플스토리 서체</b></a>가 적용되어 있습니다.</p>
+                            <p style="font-family:인피니티산스 Bold;">폰트는 <a class="text-link" rel="noopener noreferrer" target="_blank" href="https://maplestory.nexon.com/Media/Font"><b>여기</b></a>에서 확인하실 수 있습니다.</p>
+                            <p></p>
+                            <li><a style="font-family:인피니티산스 Bold;" class="text-link" rel="noopener noreferrer" target="_blank" href="https://maplestory.nexon.com/Media/Font"><b>라이센스 링크</b></a></li>
+                            <p></p>
+                            <li><a style="font-family:인피니티산스 Bold;" class="text-link" rel="noopener noreferrer" target="_blank" href="https://www.nexon.com"><b>사이트 링크 (nexon.com)</b></a></li>
+        
+                            <br><br>
+        
+                            <div class="section-title">FONT</div>
+                            <h2 style="font-family:배찌체;"><b>폰트 라이센스 -  배찌체</b></h2>
+                            <p style="font-family:인피니티산스 Bold;">이 페이지는 <b>넥슨 (Nexon)</b>에서 제공한<br><b style="font-family:배찌체;">배찌체</b>가 적용되어 있습니다.</p>
+                            <p style="font-family:인피니티산스 Bold;">폰트는 <a class="text-link" rel="noopener noreferrer" target="_blank" href="http://levelup.nexon.com/font/index.aspx?page=3"><b>여기</b></a>에서 확인하실 수 있습니다.</p>
+                            <p></p>
+                            <li><a style="font-family:인피니티산스 Bold;" class="text-link" rel="noopener noreferrer" target="_blank" href="http://levelup.nexon.com/font/index.aspx?page=3#policy"><b>라이센스 링크</b></a></li>
+                            <p></p>
+                            <li><a style="font-family:인피니티산스 Bold;" class="text-link" rel="noopener noreferrer" target="_blank" href="https://www.nexon.com"><b>사이트 링크 (nexon.com)</b></a></li>
+        
+                            <br><br>
+        
+                            <div class="section-title">FONT</div>
+                            <h2 style="font-family:인피니티산스 Bold;"><b>폰트 라이센스 -  인피니티 산스</b></h2>
+                            <p style="font-family:인피니티산스 Bold;">이 페이지는 <a><b>위메이드 (WEMADE)</b></a>에서 제공한<br><a><b>인피니티 산스</b></a> 폰트가 적용되어 있습니다.</p>
+                            <p style="font-family:인피니티산스 Bold;">폰트는 <a class="text-link" rel="noopener noreferrer" target="_blank" href="https://www.wemade.com/Company/Ci"><b>여기</b></a>에서 확인하실 수 있습니다.</p>
+                            <p></p>
+                            <li><a style="font-family:인피니티산스 Bold;" class="text-link" rel="noopener noreferrer" target="_blank" href="https://www.wemade.com/Company/Ci"><b>라이센스 링크</b></a></li>
+                            <p></p>
+                            <li><a style="font-family:인피니티산스 Bold;" class="text-link" rel="noopener noreferrer" target="_blank" href="https://www.wemade.com"><b>사이트 링크 (wemade.com)</b></a></li>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        <section class="ad-boundary"></section>
+        <div class="ad-container">
+            <div class="ad-banner">
+                <ins class="kakao_ad_area" style="display:none;" data-ad-unit="DAN-7XaddiQgitwOTXwO" data-ad-width="320" data-ad-height="100"></ins>
+            </div>
+        
+            <div class="ad-banner">
+                <ins class="kakao_ad_area" style="display:none;" data-ad-unit="DAN-j7q2ARHrZlpRDN3W" data-ad-width="320" data-ad-height="100"></ins>
+            </div>
+
+            <section class="ad-container-grid">
+                <div class="ad-banner-grid">
+                    <ins class="kakao_ad_area" style="display:none;" data-ad-unit="DAN-6ulhCbb1BRcFpoCR" data-ad-width="250" data-ad-height="250"></ins>
+                </div>
+                <div class="ad-banner-grid">
+                    <ins class="kakao_ad_area" style="display:none;" data-ad-unit="DAN-xSXeMZguggzpNcoY" data-ad-width="250" data-ad-height="250"></ins>
+                </div>
+            </section>
+        </div>
+        
+        
+        <div id="copyright" class="copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <p class="p-small"><a rel="noopener noreferrer" target="_blank" href="https://kyllox-studio.netlify.app">© Kyllox 2021</a>. <a href="pages/licence-ko.html">All Rights Reserved</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="https://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-6013486476895f09"></script>
+    <script type="text/javascript" src="https://t1.daumcdn.net/kas/static/ba.min.js" async></script>
+    <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/test.js"></script>
+    <script src="scripts/data.js"></script>
+    <script src="scripts/functions.js"></script>
+</body>
+
+</html>
