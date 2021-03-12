@@ -19,6 +19,7 @@ const startTest = function() {
         qna.style.display = 'block';
 
         goNext();
+        goPrevious();
     }, 250);
 };
 
@@ -43,6 +44,7 @@ const goNext = function() {
         for (let i in qList.a) {
             addAnswer(qList.a[i].answer, i);
         }
+        goPrevious();
         qna.style.opacity = 1;
     }, 125);
 };
@@ -83,7 +85,6 @@ const addAnswer = function(answerTxt, idx) {
     }, 25);
     a.appendChild(answer);
 };
-
 
 const end = function() {
     const spinner1 = document.getElementById('spinner1');
