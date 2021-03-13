@@ -44,7 +44,6 @@ const goNext = function() {
         for (let i in qList.a) {
             addAnswer(qList.a[i].answer, i);
         }
-        goPrevious();
         qna.style.opacity = 1;
     }, 125);
 };
