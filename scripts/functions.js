@@ -35,8 +35,8 @@ const reloadPage = function(time = 35) {
 };
 
 const goMainPage = function() {
-    if (window.location.host == 'qna-brain-personality.netlify.app') {
-        window.location.replace('https://qna-brain-personality.netlify.app');
+    if (window.location.host == 'brain-personality.site') {
+        window.location.replace('https://brain-personality.site');
     } else {
         window.location.replace('../index.html');
     }
