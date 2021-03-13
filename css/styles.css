@@ -975,7 +975,7 @@ h5 {
     display: grid;
     width: 55%;
     height: 275px;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     margin: 0 auto;
     transition: all 0.35s ease-in-out;
 }
@@ -985,7 +985,7 @@ h5 {
         display: grid;
         width: 65%;
         height: 275px;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         margin: 0 auto;
         transition: all 0.35s ease-in-out;
     }
@@ -996,7 +996,7 @@ h5 {
         width: fit-content;
         height: 525px;
         grid-template-columns: repeat(1, 1fr);
-        grid-template-rows: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
         margin-top: 2.25rem;
         transition: all 0.35s ease-in-out;
     }
