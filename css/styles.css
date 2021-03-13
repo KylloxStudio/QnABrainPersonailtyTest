@@ -980,7 +980,7 @@ h5 {
     transition: all 0.35s ease-in-out;
 }
 
-@media (max-width: 968px) {
+@media (max-width: 868px) {
     .ad-container-grid {
         width: fit-content;
         height: 835px;
