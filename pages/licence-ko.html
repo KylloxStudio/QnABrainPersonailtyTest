@@ -35,9 +35,9 @@
 
 
         <div class="send-email-wrap">
-            <input type="text" name="name" class="send-email-input form-control" placeholder="이름을 입력해주세요">
+            <input type="text" name="name" class="send-email-input form-control" placeholder="이름을 입력해주세요" onkeyup="checkWordCount(this, 10);">
             <input type="text" name="email" class="send-email-input form-control" placeholder="이메일 주소를 입력해주세요">
-            <textarea name="message" rows="3" class="send-email-textarea form-control" placeholder="내용을 입력해주세요 "></textarea>
+            <textarea name="message" rows="3" class="send-email-textarea form-control" placeholder="내용을 입력해주세요" onkeyup="checkWordCount(this, 100);"></textarea>
             <input type="button" name="submit" class="send-email-btn" value="메일 보내기"/>
         </div>
 
@@ -53,16 +53,61 @@
     <script src="../scripts/functions.js"></script>
 
     <script>
+        const name = $('input[name=name]');
+        const email = $('input[name=email]');
+        const message = $('textarea[name=message]');
+        const checkEmail = /^[A-Za-z0-9_\.\-]+@[A-Za-z0-9\-]+\.[A-Za-z0-9\-]+/;
+
+        function checkWordCount(obj, maxlength) {
+            var str = obj.value;
+            var str_length = str.length;
+            var max_length = maxlength;
+            var i = 0;
+            var ko_byte = 0;
+            var li_len = 0;
+            var one_char = "";
+            var str2 = "";
+            for (i = 0; i < str_length; i++) {
+                one_char = str.charAt(i);
+                ko_byte++;
+            }
+            if (ko_byte <= max_length) {
+                li_len = i + 1;
+            }
+            if (ko_byte > max_length) {
+                alert(max_length + " 글자 이상 입력할 수 없습니다. \n 초과된 내용은 자동으로 삭제 됩니다.");
+                str2 = str.substr(0, max_length);
+                obj.value = str2;
+            }
+            obj.focus();
+        }
+
+        function checkWordType() {
+            if (name.val() == '') {
+                alert("이름을 입력해주세요.");
+                name.focus();
+                return false;
+            } else if (email.val() == '') {
+                alert("이메일 주소를 입력해주세요.");
+                email.focus();
+                return false;
+            } else if (!checkEmail.test(email.val())) {
+                alert("이메일 주소가 올바르지 않습니다.");
+                email.focus();
+                return false;
+            } else if (message.val() == '') {
+                alert("내용을 입력해주세요.");
+                message.focus();
+                return false;
+            } else {
+                return true;
+            }
+        }
+
         emailjs.init("user_ObDVdiMQlk2RAhavouTNx");
 
         $('input[name=submit]').click(function() {
-            const name = $('input[name=name]');
-            const email = $('input[name=email]');
-            const message = $('textarea[name=message]');
-
-            const checkEmail = /^[A-Za-z0-9_\.\-]+@[A-Za-z0-9\-]+\.[A-Za-z0-9\-]+/;
-
-            const notUndefinedMessage = name.val() && email.val() && checkEmail.test(email.val()) && message.val() != '';
+            const checkUndefinedMessage = checkWordType();
 
             var templateParams = {
                 name: name.val(),
@@ -70,21 +115,7 @@
                 message : message.val()
             };
 
-            if (name.val() == '') {
-                alert("이름을 입력해주세요.");
-                name.focus();
-            } else if (email.val() == '') {
-                alert("이메일 주소를 입력해주세요.");
-                email.focus();
-            } else if (!checkEmail.test(email.val())) {
-                alert("이메일 주소가 올바르지 않습니다.");
-                email.focus();
-            } else if (message.val() == '') {
-                alert("내용을 입력해주세요.");
-                message.focus();
-            }
-
-            if (notUndefinedMessage) {
+            if (checkUndefinedMessage == true) {
                 emailjs.send('service_kyllox', 'template_kyllox', templateParams).then(function(response) {
                     window.alert('성공적으로 이메일을 전송하였습니다.\n' + response.status + ' ' + response.text);
                 }, function(e) {
