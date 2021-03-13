@@ -973,7 +973,7 @@ h5 {
 
 .ad-container-grid {
     display: grid;
-    width: 950px;
+    width: 805px;
     height: 275px;
     grid-template-columns: repeat(3, 1fr);
     margin: 0 auto;
