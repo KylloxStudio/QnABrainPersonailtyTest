@@ -973,25 +973,14 @@ h5 {
 
 .ad-container-grid {
     display: grid;
-    width: 55%;
+    width: 850px;
     height: 275px;
     grid-template-columns: repeat(3, 1fr);
     margin: 0 auto;
     transition: all 0.35s ease-in-out;
 }
 
-@media (max-width: 968px) {
-    .ad-container-grid {
-        display: grid;
-        width: 65%;
-        height: 275px;
-        grid-template-columns: repeat(3, 1fr);
-        margin: 0 auto;
-        transition: all 0.35s ease-in-out;
-    }
-}
-
-@media (max-width: 768px) {
+@media (max-width: 868px) {
     .ad-container-grid {
         width: fit-content;
         height: 525px;
