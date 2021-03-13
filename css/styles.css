@@ -1006,6 +1006,7 @@ h5 {
     width: 300px;
     height: 250px;
     margin: 0 auto;
+    overflow: hidden;
 }
 /* End of ADS */
 
