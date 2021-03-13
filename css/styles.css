@@ -973,19 +973,19 @@ h5 {
 
 .ad-container-grid {
     display: grid;
-    width: 850px;
+    width: 650px;
     height: 275px;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     margin: 0 auto;
     transition: all 0.35s ease-in-out;
 }
 
-@media (max-width: 868px) {
+@media (max-width: 768px) {
     .ad-container-grid {
         width: fit-content;
         height: 525px;
         grid-template-columns: repeat(1, 1fr);
-        grid-template-rows: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
         margin-top: 2.25rem;
         transition: all 0.35s ease-in-out;
     }
