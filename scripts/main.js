@@ -1,1 +1,50 @@
-const _0x1851=['7oMvdDi','feed','toString','bind','1208215HLTujW','^([^\x20]+(\x20+[^\x20]+)+)+[^\x20]}','710dOannz','14bNjlQa','106366KkQhLn','attr','table','ab11114588a17f210f80eb9d1668d490','__proto__','length','console','content','log','undefined','meta[property=\x22og:title\x22]','test','prototype','582337ScWSiS','3449YYmZvN','share','apply','531252ezEhHf','addEventListener','click','return\x20(function()\x20','Share\x20Failed.\x20','1HMZdfA','{}.constructor(\x22return\x20this\x22)(\x20)','error','info','init','meta[property=\x22og:url\x22]','379QEFUpj','34473dlhfNC','meta[property=\x22og:image\x22]','웹으로\x20보기','constructor','1789PPFUEv','return\x20/\x22\x20+\x20this\x20+\x20\x22/','meta[property=\x22og:description\x22]'];const _0xefe3=function(_0x3a78ac,_0x245227){_0x3a78ac=_0x3a78ac-0x106;let _0x3b9665=_0x1851[_0x3a78ac];return _0x3b9665;};const _0x4ae408=_0xefe3;(function(_0x468354,_0x2529c0){const _0x486532=_0xefe3;while(!![]){try{const _0x5c3e49=parseInt(_0x486532(0x110))*parseInt(_0x486532(0x107))+-parseInt(_0x486532(0x12e))*-parseInt(_0x486532(0x120))+parseInt(_0x486532(0x123))+-parseInt(_0x486532(0x10e))*parseInt(_0x486532(0x128))+parseInt(_0x486532(0x10a))*-parseInt(_0x486532(0x12f))+parseInt(_0x486532(0x111))*-parseInt(_0x486532(0x112))+parseInt(_0x486532(0x11f));if(_0x5c3e49===_0x2529c0)break;else _0x468354['push'](_0x468354['shift']());}catch(_0x304c6f){_0x468354['push'](_0x468354['shift']());}}}(_0x1851,0xb7aac));const _0x3bed2f=function(){let _0x1592e7=!![];return function(_0x54d319,_0x4131c1){const _0x489511=_0x1592e7?function(){const _0x539923=_0xefe3;if(_0x4131c1){const _0x33a480=_0x4131c1[_0x539923(0x122)](_0x54d319,arguments);return _0x4131c1=null,_0x33a480;}}:function(){};return _0x1592e7=![],_0x489511;};}(),_0x59ccca=_0x3bed2f(this,function(){const _0x252916=function(){const _0x322c4f=_0xefe3,_0x4c7ffe=_0x252916[_0x322c4f(0x106)](_0x322c4f(0x108))()['constructor'](_0x322c4f(0x10f));return!_0x4c7ffe[_0x322c4f(0x11d)](_0x59ccca);};return _0x252916();});_0x59ccca();const _0x5509b4=function(){let _0x45f53b=!![];return function(_0x3861d0,_0x2b79d6){const _0x11871d=_0x45f53b?function(){if(_0x2b79d6){const _0x55013c=_0x2b79d6['apply'](_0x3861d0,arguments);return _0x2b79d6=null,_0x55013c;}}:function(){};return _0x45f53b=![],_0x11871d;};}(),_0x3fc1c4=_0x5509b4(this,function(){const _0x33b34e=_0xefe3;let _0x3fd223;try{const _0x5066f4=Function(_0x33b34e(0x126)+_0x33b34e(0x129)+');');_0x3fd223=_0x5066f4();}catch(_0x27b974){_0x3fd223=window;}const _0x5a8897=_0x3fd223[_0x33b34e(0x118)]=_0x3fd223[_0x33b34e(0x118)]||{},_0x65592a=[_0x33b34e(0x11a),'warn',_0x33b34e(0x12b),_0x33b34e(0x12a),'exception',_0x33b34e(0x114),'trace'];for(let _0x54bd8a=0x0;_0x54bd8a<_0x65592a[_0x33b34e(0x117)];_0x54bd8a++){const _0x44ef77=_0x5509b4[_0x33b34e(0x106)][_0x33b34e(0x11e)][_0x33b34e(0x10d)](_0x5509b4),_0x36235c=_0x65592a[_0x54bd8a],_0x3d246c=_0x5a8897[_0x36235c]||_0x44ef77;_0x44ef77[_0x33b34e(0x116)]=_0x5509b4[_0x33b34e(0x10d)](_0x5509b4),_0x44ef77[_0x33b34e(0x10c)]=_0x3d246c[_0x33b34e(0x10c)][_0x33b34e(0x10d)](_0x3d246c),_0x5a8897[_0x36235c]=_0x44ef77;}});_0x3fc1c4(),Kakao[_0x4ae408(0x12c)](_0x4ae408(0x115)),Kakao['Link']['createDefaultButton']({'container':'#kakao-share','objectType':_0x4ae408(0x10b),'content':{'title':$('meta[property=\x22og:title\x22]')[_0x4ae408(0x113)]('content'),'description':$('meta[property=\x22og:description\x22]')['attr']('content'),'imageUrl':$(_0x4ae408(0x130))['attr'](_0x4ae408(0x119)),'link':{'mobileWebUrl':$('meta[property=\x22og:url\x22]')['attr'](_0x4ae408(0x119)),'webUrl':$('meta[property=\x22og:url\x22]')[_0x4ae408(0x113)](_0x4ae408(0x119))}},'buttons':[{'title':_0x4ae408(0x131),'link':{'webUrl':$(_0x4ae408(0x12d))['attr'](_0x4ae408(0x119))}}]});const shareButton=document['getElementById']('local-share');shareButton[_0x4ae408(0x124)](_0x4ae408(0x125),async function(){const _0x5b2561=_0x4ae408;typeof navigator[_0x5b2561(0x121)]==_0x5b2561(0x11b)&&(copyToClipboard($('meta[property=\x22og:url\x22]')[_0x5b2561(0x113)](_0x5b2561(0x119))),window['alert']('현재\x20사용하고\x20계신\x20브라우저는\x20로컬\x20공유\x20기능을\x20지원하지\x20않습니다.\x20\x0a\x20(\x20URL\x20주소가\x20클립보드로\x20복사되었습니다\x20)'));try{await navigator[_0x5b2561(0x121)]({'title':$(_0x5b2561(0x11c))[_0x5b2561(0x113)](_0x5b2561(0x119)),'text':$(_0x5b2561(0x109))[_0x5b2561(0x113)]('content'),'url':$('meta[property=\x22og:url\x22]')['attr'](_0x5b2561(0x119))});}catch(_0x5b6614){console[_0x5b2561(0x11a)](_0x5b2561(0x127)+_0x5b6614);}});
+//<![CDATA[
+    // // 사용할 앱의 JavaScript 키를 설정해 주세요.
+    Kakao.init('ab11114588a17f210f80eb9d1668d490');
+
+    // // 카카오링크 버튼을 생성합니다. 처음 한번만 호출하면 됩니다.
+    Kakao.Link.createDefaultButton({
+        container: '#kakao-share',
+        objectType: 'feed',
+        content: {
+            title: $('meta[property="og:title"]').attr('content'),
+            description: $('meta[property="og:description"]').attr('content'),
+            imageUrl: $('meta[property="og:image"]').attr('content'),
+            link: {
+            mobileWebUrl: $('meta[property="og:url"]').attr('content'),
+            webUrl: $('meta[property="og:url"]').attr('content')
+            }
+        },
+        buttons: [{
+            title: '웹으로 보기',
+            link: {
+                webUrl: $('meta[property="og:url"]').attr('content')
+            }
+        }]
+    });
+//]]>
+
+
+const shareButton = document.getElementById('local-share');
+
+shareButton.addEventListener("click", async function() {
+    if (typeof navigator.share == "undefined") {
+        copyToClipboard($('meta[property="og:url"]').attr('content'));
+        window.alert("현재 사용하고 계신 브라우저는 로컬 공유 기능을 지원하지 않습니다. \n ( URL 주소가 클립보드로 복사되었습니다 )");
+    }
+
+    try {
+        await navigator.share({
+            title: $('meta[property="og:title"]').attr('content'),
+            text: $('meta[property="og:description"]').attr('content'),
+            url: $('meta[property="og:url"]').attr('content'),
+        });
+    } catch (e) {
+        console.log("Share Failed. " + e);
+    }
+});
+
+
+$(document).ready(function() {
+    $('#used-licence').hide();
+});
