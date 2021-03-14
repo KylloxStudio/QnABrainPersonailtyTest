@@ -228,6 +228,7 @@ h5 {
     width: 100%;
     height: 100%;
     margin: 0 auto;
+    margin-bottom: 0.725rem;
 }
 
 .title-container {
@@ -379,6 +380,7 @@ h5 {
 
 /* Question and Answer */
 #QnA {
+    display: none;
     margin-top: 2.25rem;
     transition: all 0.35s ease-in-out;
 }
@@ -634,6 +636,10 @@ h5 {
     }
 }
 
+#loading {
+    display: none;
+}
+
 .loading-text {
     font-family: "메이플체";
     font-size: 2.25rem;
@@ -686,6 +692,10 @@ h5 {
         margin-top: 5.25rem;
         margin-bottom: 5.25rem;
     }
+}
+
+#result {
+    display: none;
 }
 
 .result-title {
@@ -884,21 +894,33 @@ h5 {
 	margin-bottom: 1.375rem;
 }
 
+#used-licence {
+    display: none;
+}
+
 .used-licence-link-wrap {
+    display: block;
     margin-left: 0.85rem;
-    margin-bottom: 0.65rem;
+    margin-bottom: 0.25rem;
+    overflow: hidden;
 }
 
 .used-licence-link {
+    display: inline-block;
     font-family: "메이플체";
     font-size: 1.125rem;
     color: #3a3b3c;
     text-decoration: underline;
     cursor: pointer;
+    overflow: hidden;
 }
 
 .used-licence-link:hover {
     color: #4a4b4c;
+}
+
+#hide-used-licence {
+    display: none;
 }
 /* End of Used Licence */
 
@@ -915,6 +937,10 @@ h5 {
 .copyright a {
     color: #dfe5ec;
     text-decoration: none;
+}
+
+#easteregg {
+    cursor: pointer;
 }
 /* End of Copyright */
 
@@ -1249,7 +1275,7 @@ h5 {
 
 .licence-language-btn-wrap {
     display: block;
-    position: absolute;
+    position: fixed;
     right: 0.85rem;
     bottom: 0.65rem;
     animation: fade-in 0.35s ease-out 0.3s both;
