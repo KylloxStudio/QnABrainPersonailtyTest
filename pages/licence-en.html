@@ -63,6 +63,16 @@
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="../scripts/licence-main.js"></script>
     <script src="../scripts/functions.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            if (window.location.pathname.indexOf('brain-personality.site') != -1) {
+                if (window.location.pathname.indexOf('.html') != -1) {
+                    window.location.replace('licence-en');
+                }
+            }
+        });
+    </script>
 </body>
 
 </html>
